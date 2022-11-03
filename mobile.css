@@ -1,0 +1,213 @@
+﻿/* 20200511 */
+
+html,body {
+    overflow-x:hidden;
+    width:auto;
+    min-width:0
+}
+
+h1 {
+	text-align:left
+}
+
+#mainWrapper {
+    float:none;
+    width:auto;
+    background:#fff
+}
+
+#mainWrapperClip {
+    float:none;
+    width:100%;
+    background:none;
+    background-position:0
+}
+
+#wrapperContent {
+    width:auto
+}
+
+.headerWrapper {
+	padding-top: 49px;
+    float:none;
+    width:auto
+}
+
+#indexHeaderWrapper {
+    height:auto
+}
+
+#insideHeaderWrapper {
+    height:auto
+}
+
+#insideHeaderWrapper #slideWrapper {
+    height:150px;
+    overflow:hidden
+}
+
+#midWrapper {
+    float:none;
+    width:auto;
+    margin: 5px
+}
+
+#footerWrapper {
+    float:none;
+    width:auto
+}
+
+.footerList li {
+    float:none
+}
+
+#mobile-menu-button-a {
+    color:#000;
+    padding:5px;
+    text-decoration:none
+}
+
+#mobile-menu-button {
+    font-size:25px;
+    float:left;
+    z-index:103;
+    position:absolute;
+    left:5px;
+    top:5px
+}
+
+#nav-menu {
+    position:fixed;
+    margin-top:25px;
+    left:-300px;
+    width:300px;
+    z-index:199
+}
+
+#nav-menu ul {
+    padding:0
+}
+
+#nav-menu li {
+    float:none;
+    width:95%;
+    padding-bottom: 8px;
+    background: none;
+}
+
+#nav-menu a {
+    float:none
+}
+
+#logo {
+    float:none;
+     top: 25px;
+}
+
+#logo2 {
+    float:none
+}
+
+#logo2 a,img {
+    border:0
+}
+
+div {
+    max-width:640px
+}
+
+img {
+    max-width:640px
+}
+
+#slideshowID img {
+    max-width:640px
+}
+
+.slideshowClass {
+	
+	height: 150px;
+	
+}
+
+.thickBorderOverBox {
+    margin-top:5px
+}
+
+#mid1 {
+    float:none;
+    width:auto;
+    margin-right: 0
+}
+
+#mid2 {
+    float:none;
+    width:auto;
+    margin-top: 15px;
+    margin-right: 0
+
+}
+
+#mid3 {
+    float:none;
+    width:auto;
+    margin-top: 15px;
+    margin-right: 0
+
+}
+
+#mid4 {
+    float:none;
+    width:auto;
+    margin-top: 15px    ;
+    margin-right: 0
+
+}
+
+#mainContent {
+    float:none;
+    width:auto;
+    min-height:0;
+    padding:0
+}
+
+#insideRightSidebar {
+    float:none;
+    width:auto;
+    min-height:0;
+    padding-top:5px
+}
+
+.callOutImage {
+    float:none;
+	display:inline-block;    
+}
+
+.mobile-only {
+    display:block
+}
+
+#mobile-menu-button-a img {position: relative;
+top: 8px;}
+
+.adsenseMobileFullWidth {
+	clear:both;
+	margin-left:0;
+	margin-right:0;
+	width:initial;
+	display:initial;
+	height:initial;
+	float: initial; 
+}
+
+.addthis_floating_style {
+	 display: none
+}
+
+
+article img {max-width:90%; 
+height: auto;
+padding: 10px
+
+ }
+
