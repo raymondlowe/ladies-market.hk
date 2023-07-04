@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
-
-<!-- #BeginTemplate "inside.dwt" -->
+<html lang="en">
 
 <head>
 <meta charset="UTF-8">
@@ -22,12 +20,7 @@
 <!-- end mobile support -->
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 <!-- #BeginEditable "doctitle" -->
-<link rel="canonical" href="https://www.ladies-market.hk/how-to-get-to-ladies-market-from-nathan-road.html">
-<title>How to Get to Ladies' Market from Nathan Road</title>
-<meta name="twitter:image" content="https://www.ladies-market.hk/images/20141017-145819-temple-street-night-market-133a-1200.jpg">
-<meta property="og:image" content="https://www.ladies-market.hk/images/20141017-145819-temple-street-night-market-133a-200x200.jpg" />
-<meta property="og:image" content="https://www.ladies-market.hk/images/20141017-145819-temple-street-night-market-133a-1200.jpg" />
-
+<title>New Page 1</title>
 <!-- #EndEditable -->
 <script defer src="slider.js"></script>
 <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/www.ladies-market.hk\/","name":"Ladies' Market","alternateName":"Ladies' Market Hong Kong"}</script>
@@ -112,83 +105,7 @@
                 
             					<!-- AddThis Button END -->
 					<!-- #BeginEditable "content" -->
-					<div class="breadcrumb">
-						<span vocab="http://schema.org/" typeof="BreadcrumbList">
-						<span property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://www.ladies-market.hk/">
-						<span property="name">Ladies' Market</span></a>
-						<meta property="position" content="1">
-						</span>›
-						<span property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://www.ladies-market.hk/how-to-get-there.html">
-						<span property="name">Getting Here</span></a>
-						<meta property="position" content="2">
-						</span>›
-						<span property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://www.ladies-market.hk/how-to-get-to-ladies-market-from-nathan-road.html">
-						<span property="name">How to Get to Ladies' Market from 
-						Nathan Road</span></a>
-						<meta property="position" content="3">
-						</span></span></div>
-					<h1>How to Get to Ladies' Market from Nathan Road </h1>
-					<p>Nathan Road is a major artery running through the whole 
-					Kowloon peninsular.&nbsp; For some distance it is parallel 
-					to Ladies' Market and quite close, so how to get from one to 
-					the other depends exactly on where you are, but most people 
-					will be coming from the southern end of the road as that is 
-					near the hotels, Star Ferry and Victoria Harbour.</p>
-					<h2>Option 1 - MTR</h2>
-					<ol>
-						<li>
-						<img src="images/20141017-145819-temple-street-night-market-133a.jpg"  align="right" width="453" height="261">Follow 
-						signs to your nearest MTR station, that will probably be 
-						Tsimshatsui Station, or possibly Jordan.&nbsp; Avoid "East 
-						Tsimshatsui Station" which is on the wrong line.</li>
-						<li>Pay with Octopus or use coins to buy a ticket. It is 
-						HK$5.50 for a ticket, or HK$5.20 from your Octopus.</li>
-						<li>Take the Tsuen Wan line, signed in red, in the 
-						direction towards Tsuen Wan.</li>
-						<li>Travel two stations past Jordan and Yau Ma Tei and 
-						alight when you arrive in the Mongkok Station</li>
-						<li>Take the escalator up from the platform and follow 
-						signs toward Exit E, called the Bank Centre exit. When 
-						the tunnel splits, turn towards E2.</li>
-						<li>At street level walk directly away from the MTR exit 
-						along Nelson Street, taking care when crossing roads, 
-						for one whole block and you will be in the middle of the 
-						Ladies Market.</li>
-					</ol>
-					<p>At this point you can turn into the market either to your 
-					left or right, both are fine though turning right, 
-					southward, will give you more of the market to walk along.</p>
-
-<div class="adsense"> <!-- 202005081509 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ladies market get there nathan road lower -->
-<ins class="adsbygoogle"
-     style="display:block" 
-data-ad-format="auto" 
-data-full-width-responsive="true"
-
-     data-ad-client="ca-pub-4033486014832881"
-     data-ad-slot="4647244811"></ins>
-<script>
-((((adsbygoogle = window.adsbygoogle || []).push({}))));
-</script>	
-
-					<h2>Option 2 - Walk</h2>
-					<ol>
-						<li>Walk north along Nathan Road and enjoy the busy 
-						street but keep an eye out for the MTR signs.</li>
-						<li>Pass Jordan MTR station</li>
-						<li>Pass Yau Ma Tei MTR station</li>
-						<li>Look for a right turn into Dundas Street</li>
-						<li>Walk one block and turn left into Tong Choi Street</li>
-					</ol>
-					<p>With this route you arrive right at the southern end of 
-					the road, so to explore the market it is simply a matter of 
-					walking northward to see all the stalls.</p>
-					</div>
+					<p>(content)</p>
 					<!-- #EndEditable -->
 					<a class="addthis_button_facebook_like" fb:like:layout="standard">
 					</a>
@@ -257,7 +174,5 @@ data-full-width-responsive="true"
 <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eb21760e27f5edd"></script>
 
 </body>
-
-<!-- #EndTemplate -->
 
 </html>
