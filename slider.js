@@ -1,9 +1,4 @@
 $(document).ready(function () {
-    $('.slideshowClass').cycle({
-        fx: 'scrollLeft',
-        pause: true,
-        timeout: 5000
-    });
 
     $('#logo').click(function () {
         window.location.href = 'https://www.ladies-market.hk/';
