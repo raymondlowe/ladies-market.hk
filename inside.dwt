@@ -15,7 +15,7 @@
 <link href="styles.css" rel="stylesheet" type="text/css"/>
 <!-- start mobile support -->
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" name="viewport"/>
-<link href="mobile.css" media="handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px)" rel="stylesheet" type="text/css">
+<link href="mobile.css" media="handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px)" rel="stylesheet" type="text/css"/>
 <!-- end mobile support -->
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <!-- #BeginEditable "doctitle" -->
@@ -32,9 +32,8 @@
 
   gtag('config', 'G-9085SE6554');
 </script>
-</link></head>
+</head>
 <body>
-
 <div class="push" id="mainWrapperClip">
 <div id="wrapperContent">
 <div class="headerWrapper" id="insideHeaderWrapper">
@@ -80,8 +79,7 @@
 <!-- #BeginEditable "content" -->
 <p>(content)</p>
 <!-- #EndEditable -->
-<a class="addthis_button_facebook_like" fb:like:layout="standard">
-</a>
+
 </article>
 </div>
 <div class="thickBorderOverBox" id="insideRightSidebar">
