@@ -1,4 +1,18 @@
 import os
+import shutil
+
+
+
+# Remove .private and .github folders in current directory if they exist
+for folder in ['.private', '.github']:
+    folder_path = os.path.join(os.getcwd(), folder)
+    try:
+        shutil.rmtree(folder_path)
+        print(f"Deleted {folder} folder: {folder_path}")
+    except FileNotFoundError:
+        pass
+    except Exception as e:
+        print(f"Failed to delete {folder} folder: {e}")
 
 filenames = []
 for root, dirs, files in os.walk('.'):
