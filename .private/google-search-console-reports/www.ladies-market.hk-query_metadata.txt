@@ -1,0 +1,8 @@
+start_date: 2024-07-01
+end_date: 2025-06-30
+dimensions: query
+name: output/www.ladies-market.hk-query
+search_type: web
+google_account: 
+generated_at: 2025-07-27 23:37:20
+total_rows: 10639

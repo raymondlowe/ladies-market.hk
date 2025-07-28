@@ -1,0 +1,8 @@
+start_date: 2024-07-01
+end_date: 2025-06-30
+dimensions: device
+name: output/www.ladies-market.hk-device
+search_type: web
+google_account: 
+generated_at: 2025-07-27 23:37:27
+total_rows: 3
