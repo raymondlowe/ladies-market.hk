@@ -1,0 +1,109 @@
+name: Perplexity AI Research
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  research:
+    # This job runs when a comment is created on an issue
+    # and the comment body begins with the trigger phrase '/research'.
+    if: github.event.issue && startsWith(github.event.comment.body, '/research')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment: copilot
+
+    steps:
+      - name: Extract research question from comment
+        id: get_question
+        run: |
+          # Extracts content after '/research'
+          QUESTION=$(echo "${{ github.event.comment.body }}" | sed -nE 's/^\/research[[:space:]]*"?([^"]*)"?/\1/p')
+          if [[ -z "$QUESTION" ]]; then
+            echo "No research question found in quotes. Skipping."
+            exit 0
+          fi
+          echo "question=$QUESTION" >> $GITHUB_OUTPUT
+
+      - name: Call Perplexity API
+        if: steps.get_question.outputs.question
+        id: call_api
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.COPILOT_MCP_PERPLEXITY_API_KEY }}
+          RESEARCH_QUESTION: ${{ steps.get_question.outputs.question }}
+        run: |
+          RESPONSE=$(curl -s -X POST https://api.perplexity.ai/chat/completions \
+            -H "Authorization: Bearer $PERPLEXITY_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "model": "sonar-deep-research",
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "You are an expert researcher. Be precise and factual, providing a comprehensive answer to the user'\''s question."
+                },
+                {
+                  "role": "user",
+                  "content": "'"$RESEARCH_QUESTION"'"
+                }
+              ]
+            }')
+          echo "Perplexity API raw response: $RESPONSE"
+          if echo "$RESPONSE" | jq -e '.error' > /dev/null 2>&1; then
+            echo "Perplexity API returned an error:"
+            echo "$RESPONSE"
+            exit 1
+          fi
+          if ! echo "$RESPONSE" | jq -e '.choices[0].message.content' > /dev/null 2>&1; then
+            echo "API response is not valid or does not contain an answer."
+            echo "API Response: $RESPONSE"
+            exit 1
+          fi
+          ANSWER=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
+          echo "answer<<EOF" >> $GITHUB_OUTPUT
+          echo "$ANSWER" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Post research and instructions for Copilot Agent
+        if: steps.call_api.outputs.answer
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            @copilot
+            ### 🔎 AI Research Result
+            > **Question:** `${{ steps.get_question.outputs.question }}`
+            ---
+            ${{ steps.call_api.outputs.answer }}
+            ---
+            *Research performed by Perplexity via GitHub Actions.*
+            ---
+            ### ✅ Instructions for Copilot Agent
+            **Based on the research above, please begin the following action plan to improve the `sneakers-street.hk` website.**
+            #### 1. Content Audit & Keyword Analysis
+            - **Catalogue all existing `.html` pages:** Document each page’s purpose and identify outdated content (2024 or older) and content gaps.
+            - **Assess SEO Presence:** Use available tools to identify keywords the site ranks for, including rank, traffic, and CPC.
+            - **Analyze New Keywords:** Assemble lists of related, high-value keywords (high CPC/volume), focusing on commercial intent (e.g., "best sneaker deals," "rare sneakers," "shopping tours"). Note seasonal and Hong Kong-specific queries.
+            #### 2. Action Plan for Content Enhancement
+            - **Enhance Existing Pages:** For each key page, expand depth, add FAQs, and integrate target keywords into content and meta tags. Update all information to be current for 2025.
+            - **Create High-Impact New Pages:** Develop new pages targeting high-value keywords. **Use the `inside.dwt` template for all new pages**, editing only within the `#BeginEditable` / `#EndEditable` regions. Create SEO-optimized titles and meta descriptions.
+            - **Internal Linking Strategy:** Audit for and fix orphan pages. Ensure all new and existing content is logically interlinked. Update navigation menus in the template as needed.
+            #### 3. Technical & Functional Quality Control
+            - **Validate Rendering & Navigation:** Check that all pages render correctly and navigation is consistent.
+            - **Confirm Template Integrity:** **Never edit content outside the `#BeginEditable`/`#EndEditable` regions.** All new pages must be created from a copy of the template.
+            - **Verify Meta Tags:** Ensure all pages have appropriate meta descriptions and keywords.
+            #### 4. Reporting and Final Checks
+            - **Summarize Changes:** In your final pull request summary, list all new pages created, major enhancements, and any template modifications.
+            - **Confirm Deployment:** Ensure the site deploys successfully without build errors, broken links, or 404s.
+            #### Tasks Checklist
+            - [ ] Audit and document all existing pages/topics.
+            - [ ] Catalog current SEO performance and identify new high-value keywords.
+            - [ ] Enhance each important existing page as outlined.
+            - [ ] Implement new keyword-focused pages using the correct template (`inside.dwt`).
+            - [ ] Check and document all page interlinking.
+            - [ ] Validate full site functionality and deployment post-change.
+            - [ ] Produce a final change summary.
