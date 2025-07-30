@@ -100,10 +100,15 @@ jobs:
             - **Summarize Changes:** In your final pull request summary, list all new pages created, major enhancements, and any template modifications.
             - **Confirm Deployment:** Ensure the site deploys successfully without build errors, broken links, or 404s.
             #### Tasks Checklist
+            - [ ] Refer to `.private/ultimate-website-improvement-instructions.md` for detailed instructions.
+            - [ ] Follow the detailed plan in `.private/detailed-plan*.md` for specific tasks.
+            - [ ] Add to this checklist as you discover new things to do, particularly new topics and new pages to create.
             - [ ] Audit and document all existing pages/topics.
+            - [ ] Check facts and update all content to be current for this year.
             - [ ] Catalog current SEO performance and identify new high-value keywords.
             - [ ] Enhance each important existing page as outlined.
             - [ ] Implement new keyword-focused pages using the correct template (`inside.dwt`).
             - [ ] Check and document all page interlinking.
             - [ ] Validate full site functionality and deployment post-change.
+            - [ ] Check back the detailed-plan*.md and the ultimate-website-improvement-instructions.md files when you think have finished to see if there are any additional improvements you can do.
             - [ ] Produce a final change summary.
