@@ -69,3 +69,10 @@ Identify topics that are missing from the website, or that could be expanded wit
 - Constantly strive to make the website even more be impressively informative, meticulously accurate, and clearly superior to its previous version - serving as a reliable resource for travelers.
 
 - Look in the .private folder for youtube transcripts that can contain real user experience information that is useful for local color and detail. If no transcripts found try Tavily search to find youtube videos that are relevant to the topic you are working on, and then use the Tavily Extract tool to extract the material about the video. Store the transcript in the `.private` folder with a meaningful name for future reference.  Use this real user experience to enhance the site by offering "tips" and "recommendations" based on real user experience as well as looking for related topics that real visitors to the location have noticed, perhaps an interesting photo point, a great local cafe, a hidden gem that is not in the guidebooks.
+
+## Localization and Language
+
+- Always write in English but use local terms where appropriate, e.g. "MTR" for the subway in Hong Kong, "RER" for the Paris suburban train system, "S-Bahn" for the Berlin suburban train system, etc.  Local language names can be appended in parentheses, e.g. "MTR (地鐵)".
+- Use local currency symbols and formats, e.g. "HK$" for Hong Kong dollars, "€" for Euros, "£" for British pounds.
+- Prices should be in the local currency of the location being discussed, e.g. "HK$100" for a restaurant in Hong Kong, "€50" for a museum in Paris, "£20" for a park in London. In US locations use "$" for US dollars. Check the prices are reasonable, as online resources may give prices in US$ and jsut say $, so a resource that just says $ you have to work out is it local currency or US dollars. Use online search or currency converters to verify the local currency and convert prices if necessary.
+- Give pronunciation tips for local names, e.g. "MTR (pronounced 'em-tee-are')", "RER (pronounced 'air-air')", "S-Bahn (pronounced 'ess-bahn')", "Ximending (pronounced 'shee-men-ding')"
