@@ -2,14 +2,16 @@
 
 You are tasked with improving a website so as to generate more total revenue from Google AdSense ads. This means getting more visitors with high purchase intent via good SEO on related topics. Your goal is to maximize accuracy, usability, and helpfulness for all users. You must follow these explicit, non-negotiable instructions, referencing and updating the project’s `.private` and `.github` files as required. Do not rely on generic best practices—be precise, strict, and thorough.
 
-## 0. Do deep research
+## Step  0. Do deep research if not yet done
+First check in the .private folder for a `deep-research-report*.md`, and if that already exists then this step is done, you should skip ahead to Step 1, but if there is no deep-research-report… then do this:
+:
 You have access to a deep research tool powered by Perplexity Sonar Deep-Research in the form of a github action which is triggered by single comments of the form `/research <question>`. 
 
 After reading the repository comment, formulate a series of research questions to be combined into one text blob to be passed to the github action in the comment. Then create a single comment on the pull request using the github mcp server in the form `/research <question>`. (You don’t need to read the existing comments just write this new one).
 
 Wait for up to 5 minutes until the github action responds with a comment on the pull request. Then take the research answer which will be in the form of a comment on the pull request and and store them in a file in the .private subfolder named `deep-research-report-<topic>-<yyyy-mm-dd>.md` with appropriate topic and date.  Use this deep research information as background material while you do the following instructions. 
 
-## 1. General Improvement Instructions
+## Step  1. General Improvement Instructions
 - Review every HTML file for clarity, accuracy, and completeness. Use the `.private/fact-check-instructions.md` as your fact-checking and editorial baseline.
 - Ensure all information is up-to-date, well-organized, and easy to understand. If you find outdated or unclear content, rewrite it for clarity and accuracy.
 - Enhance user experience by improving navigation, accessibility, and visual appeal. Reference `.github/copilot-instructions.md` for template and navigation update rules.
@@ -20,7 +22,7 @@ Wait for up to 5 minutes until the github action responds with a comment on the 
 - Use the detailed action plan .md file in the .private folder as a basis but add, extend, expand, be creative. 
 - Do good research but also *use* it to build this website into a richer more detailed one with pages and more related pages dedicated to "people also searched for" strings. Use KeywordsEverywhere to find related and also searched for terms that connect with our successful terms as seen in Google Search Console query data. Look for entirely new related, orthogonal, related, nearby (both geographically and conceptually) ideas for whole new useful pages.
 
-## 2. Fact-Checking and Data Validation
+## Step  2. Fact-Checking and Data Validation
 - For every fact, statistic, or claim, extract and log it in `.private/facts.xml` using the XML structure and BNF grammar in `.private/fact-check-instructions.md`.
 - Independently verify every fact using Tavily Search and Extract, Google, and authoritative sources. Update the `status`, `citation_url`, and `date_checked` fields in `facts.xml`.
 - If a location, business, or service is mentioned, confirm it is still open and operating as described. If closed, update the website and log the change in `.private/CHANGELOG.md`.
@@ -28,48 +30,48 @@ Wait for up to 5 minutes until the github action responds with a comment on the 
 - For every new or changed fact, add a note in `.private/last-job.md` describing what was checked, the outcome, and next steps.
 - Update copyright notices to the current year "2025", do global search and replace with `sed` if possible on `.html` files and the `inside.dwt`
 
-## 3. Deduplication and Generalization
+## Step  3. Deduplication and Generalization
 - If multiple sections or pages repeat similar information, consolidate them for clarity and brevity. Document all consolidations in `.private/CHANGELOG.md`.
 - Generalize specific fixes into broader rules. For example, if you fix a closed business, add a rule in `.github/copilot-instructions.md` to always check business status before publishing.
 - Create or update reusable templates or guidelines for common content types (e.g., location listings, event announcements) in `.github/copilot-instructions.md`.
 
-## 4. Error Prevention and Quality Assurance
+## Step  4. Error Prevention and Quality Assurance
 - Anticipate common errors (e.g., outdated hours, closed locations, incorrect contact info) and implement checks to prevent them. Add reminders or automated checks where possible, and document them in `.github/copilot-instructions.md`.
 - For time-sensitive information, add review reminders in `.private/last-job.md` and update the relevant HTML or template files to include review dates.
 - Where possible, automate data updates or integrate with authoritative sources. Document any automation scripts or processes in `.private/` and reference them in `.github/copilot-instructions.md`.
 - After every major edit, verify all changes by reviewing the affected files. Log the verification in `.private/last-job.md` and summarize in `.private/CHANGELOG.md`.
 
-## 5. User-Focused Enhancements
+## Step  5. User-Focused Enhancements
 - Solicit and incorporate user feedback to identify pain points and areas for improvement. If feedback is received, log it in `.private/feedback.md` and document actions taken in `.private/CHANGELOG.md`.
 - Ensure all content is inclusive, accessible, and respectful of diverse audiences. Reference `.github/copilot-instructions.md` for accessibility and inclusivity guidelines.
 - Provide clear calls to action and easy ways for users to report errors or suggest improvements. Add or update contact forms, feedback links, or email addresses as needed, and log changes in `.private/CHANGELOG.md`.
 - Integrate new or improved pages into the site via relevant hyperlinks, navigation, or footers, as specified in `.github/copilot-instructions.md`.
 
-## 6. Research, Logging, and Documentation
+## Step  6. Research, Logging, and Documentation
 - Use MCP servers, Tavily, and Google Analytics/Search Console for all research. Store all research results and transcripts in `.private/` with meaningful filenames.
 - Before starting any job, review `.private/last-job.md` and `.private/CHANGELOG.md` to understand previous work and avoid duplication.
 - Log all activities, errors, and completed steps in `.private/last-job.md` and `.private/CHANGELOG.md`. When a job is finished, archive the old last-job file with a date/time stamp.
 - If you encounter a task you cannot complete, document the reason and next steps in `.private/tasks-cannot-be-completed.md`.
 
-## 7. Quality Control and Continuous Improvement
+## Step  7. Quality Control and Continuous Improvement
 - Always check your work—never assume edits or commands executed correctly. Review files to confirm expected changes occurred.
 - Update `.github/copilot-instructions.md` with new learnings, rules, or corrections as you go.
 - Constantly strive to make the website more informative, accurate, and superior to its previous version, as a reliable resource for travelers.
 - When this website you are improving is returned in search queries e.g. by Tavily or Perlexit ignore it as this site is outdated, that is why we are improving it. You cannot use this site as a reference while improving this site, look for authoritative resources such as Wikipedia or official tourism department / board / office websites as well as unbiased user generated content such as blog posts, reddit posts, tripadvisor reviews and forum posts.
 
-## 8. Localization, Language, and Style
+## Step  8. Localization, Language, and Style
 - Always write in English but use local terms and currency formats as appropriate (see `.github/copilot-instructions.md`).
 - Use full, rich prose suitable for a travel guide. Break up text with tips, recommendations, lists, and links, but ensure paragraphs are well-written and accessible.
 - For every recommended place, dish, or activity, research and provide specifics (names, addresses, prices, hours) and store the research in `.private/` for future reference.
 
 
-## 9. Monetization (AdSense Only)
+## Step  9. Monetization (AdSense Only)
 - Monetize the website exclusively using Google AdSense AutoAds. Do NOT add individual AdSense units or any affiliate links. Ensure the AutoAds script is present in the site header as specified in `.github/copilot-instructions.md`.
 - Prioritize content and page creation that targets high-CPC (cost-per-click) keywords and topics, as identified in `.private/detailed-action-plan-*.md` and through research using KeywordsEverywhere and Tavily.
 - Integrate new high-value pages into the site structure (navigation, footers, internal links) to maximize visibility and revenue potential. Document all monetization-related changes in `.private/CHANGELOG.md`.
 - Regularly review AdSense performance using Google Analytics and Search Console data. Store reports and insights in `.private/google-search-console-reports/` and reference them in `.private/last-job.md` for ongoing optimization.
 
-## 10. SEO (Search Engine Optimization)
+## Step  10. SEO (Search Engine Optimization)
 - Optimize every page for search engines by following the latest SEO best practices, as outlined in `.github/copilot-instructions.md` and `.private/detailed-action-plan-yellowstone-national-park.com.md`.
 - Use keyword research tools (KeywordsEverywhere, Tavily, Google Search Console) to identify and target high-volume, high-value, and relevant search terms. High volume, medium to low competition terms are the target. "People Also Search For" helps to find related topics currently not catered for, make strong use of KeywordsEverywhere tools to find new topics. Document keyword targets for each page in `.private/keyword-targets.md`.
 - Ensure all pages have unique, descriptive titles, meta descriptions, and appropriate heading structures (H1, H2, etc.).
@@ -78,7 +80,7 @@ Wait for up to 5 minutes until the github action responds with a comment on the 
 - Track SEO performance and rankings using Google Search Console and analytics. Store and review reports in `.private/google-search-console-reports/`.
 
 
-## 11. Write, edit, create new pages
+## Step  11. Write, edit, create new pages
 - You MUST edit, enhance and improve any exist pages which have factual errors, gaps or room for improvement.
 - You MUST create new pages about related, orthogonal, nearby (both geographically and conceptually) topics.
 - You MUST make authoritative long deep Skyscraper content that is better than anything else.
