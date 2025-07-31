@@ -15,9 +15,17 @@
   - Integrated research insights about peak/off-peak times
   - Added cross-linking to bargaining guide for user journey optimization
 
+- **✅ CREATED**: `hong-kong-markets-complete-guide-comparison-2025.html` - Massive Tier 2 priority content targeting 110k monthly searches
+  - Comprehensive comparison of 5 major Hong Kong markets (Ladies, Temple Street, Jade, Stanley, Cat Street)
+  - Professional comparison table with pricing, hours, specialties
+  - Strategic market selection guide based on budget/time/goals  
+  - Transportation routing and seasonal optimization strategies
+  - 7,000+ words of authoritative travel guide content
+
 ### Content Improvements
 - **✅ UPDATED**: `shopping.html` - Added strategic link to bargaining guide with corrected bargaining expectations
 - **✅ CORRECTED**: Outdated information about "no bargaining" - research shows 30-70% discount potential exists
+- **✅ ENHANCED**: `how-to-get-to-ladies-market-from-mongkok-mtr-station.html` - Updated title and meta description for better CTR
 
 ### Research Completed
 - **✅ SAVED**: Deep research report from Perplexity GitHub action
