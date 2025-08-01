@@ -28,12 +28,14 @@ Use `date` command to check the current date, pay attention to the current year.
 - **Prioritize keywords**: Use the KeywordsEverywhere MCP server to prioritize based on search volume and commercial value
 - **Gap Analysis**: Identify content gaps by comparing with competitors and using the Tavily MCP server for insights
 - **Fresh Content**: Look for topics that need updating or new content based on recent trends and user interests
+- **Make stub page immediately**: When a new topic has been identified make the stub page from the template (``cp <template name>.dwt <new-page-name>.html`) immediately and populate with whatever basic information you already have on the subject, e.g. from research and searches.
 
 ## Project Management and Logging
 - **Log all activities**: Write detailed logs in the `.private` folder, use the CHANGELOG.md for summaries
 - **Check previous work**: When starting a job, review the `.private/last-job.md` file and the CHANGELOG.md to understand what was last completed and what needs to be done next
 - **Store working files**: Use the `.private` folder for research results to avoid duplicate effort, don't cleanup, just keep everything
-- **Mark completed items DONE**: Whenever following instructions in a plan document, once a step has been completed edit the file to add DONE against the completed item with a date/time.
+- **Use TODO.md**: Create, read and update a file `.private/TODO.md` with checklists of things to do. Delete items when done (don't just x mark them, actually delete them from the TODO.md file). When creating `Next steps` , `Next Priority Actions`, `Next Phase Priorities` or any thing about what is to do next append it to the TODO.md file.
+- **Mark completed items DONE**: Whenever following instructions in a plan document, once a step has been completed edit the file to add DONE against the completed item with a date/time. If it is in the `TODO.md` then also delete the task line from the file.
 
 ## HTML and Template Management
 - **Respect editable regions**: When editing HTML pages, only make changes within "editableRegion" boundaries if they exist
@@ -41,14 +43,22 @@ Use `date` command to check the current date, pay attention to the current year.
 - **Use shell scripts for bulk edits**: Employ `.sh` scripts with `sed`, `awk`, `sed` etc. for bulk operations (e.g., updating copyright notices). Avoid using diffs for such tasks
 - **Create pages from templates**: Always use `cp <templatename>.dwt <new-filename>.html` when creating new pages
 
+- **Close all tags**: Make sure that tags are closed properly, particularly `<script>` tags which must always be closed with `</script>`
+
 ## Quality Control and Documentation
 - **Update instructions when needed**: If you make a mistake and correct it, update these instructions in the `.github/copilot-instructions.md` file. It is ok to include learnings that are specific to this project / destination
 - **Document completed work**: When finishing a job, save the previous last-job.md file by renaming it with the file date-time to `completed-job-date-time.md`, then update the `.private/last-job.md` file with details of what was accomplished and next steps. Add a summary to CHANGELOG.md, creating it if necessary.
 - **Verify all changes**: Always check your work—don't assume edits or shell commands executed correctly. Review files to confirm expected changes occurred
 
-## Expanding the website with additional topics
+## Expanding the website 
 
-Identify topics that are missing from the website, or that could be expanded with more information, by using KeywordsEverywhere "People Also Search For" PASF to find searches that relate to the top topics mentioned in the `.private/google-search-console-reports/<domain>-query.csv`.
+- **Additional topics**: Identify topics that are missing from the website, or that could be expanded with more information, by using KeywordsEverywhere "People Also Search For" PASF to find searches that relate to the top topics mentioned in the `.private/google-search-console-reports/<domain>-query.csv`. Make stub pages from the .dwt template using `cp` and fill in with basic information from existing research first before going on to expand into indepth resource page.
+- **Expand short pages**: If pages have less than 500 words then research the topic and expand it to more than 500 words. Use `wc` to count words, but compare against the 'words' of the empty template .dwt file to make sure you are counting content words, not the template boilerplate.
+
+## Linking policy
+- **Link to authoritative sources**: Use tavily search to find correct links for hotels, restaurants, shops etc and link to them.
+- **Check existing and new links are valid**: Use tavily extract to load links and make sure they really are the correct thing, if they are not search again and fix the links. If no specific link is found a generic link such as Wikipedia or Tripadvisor can be substituted.
+- **External links to open in new window**: All external links should use `target="_blank"` to open in a new window.
 
 ## Additional instructions
 
