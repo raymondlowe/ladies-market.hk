@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ladies Market Website Facts Database -->
+<!-- Follows BNF grammar from fact-check-instructions.md -->
+<facts>
+  <metadata>
+    <created>2025-08-01</created>
+    <last_updated>2025-08-01</last_updated>
+    <version>1.0</version>
+    <total_facts>3</total_facts>
+  </metadata>
+  
+  <fact id="LM001">
+    <statement>Ladies Market operates with official hours from 12:00 PM to 11:00 PM daily</statement>
+    <source>/home/runner/work/ladies-market.hk/ladies-market.hk/opening-hours.html</source>
+    <category>transportation</category>
+    <status>verified</status>
+    <verification>
+      <verification-url>https://www.tripadvisor.com/Attraction_Review-g294217-d635372-Reviews-Ladies_Market-Hong_Kong.html</verification-url>
+      <date-checked>2025-08-01</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>high</confidence-level>
+      <notes>Multiple sources confirm 12pm opening, 10-11pm closing times with variations by stall</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-01</created-date>
+      <last-updated>2025-08-01</last-updated>
+      <importance-level>high</importance-level>
+      <tourist-relevance>critical</tourist-relevance>
+    </metadata>
+  </fact>
+
+  <fact id="LM002">
+    <statement>Ladies Market is closed only on the first day of Chinese New Year</statement>
+    <source>/home/runner/work/ladies-market.hk/ladies-market.hk/opening-hours.html</source>
+    <category>events</category>
+    <status>partially-true</status>
+    <verification>
+      <verification-url>https://www.mongkok.dorsetthotels.com/mongkok-things-to-do/shopping/ladies-market.html</verification-url>
+      <date-checked>2025-08-01</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>medium</confidence-level>
+      <notes>Confirmed closure on first day CNY, but may also close during severe weather or special circumstances</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-01</created-date>
+      <last-updated>2025-08-01</last-updated>
+      <importance-level>medium</importance-level>
+      <tourist-relevance>high</tourist-relevance>
+    </metadata>
+  </fact>
+
+  <fact id="LM003">
+    <statement>Tung Choi Street closed to vehicle traffic from 4:00 PM to midnight Monday to Saturday, 12:00 PM to 10:00 PM Sunday and Public Holidays</statement>
+    <source>/home/runner/work/ladies-market.hk/ladies-market.hk/opening-hours.html</source>
+    <category>transportation</category>
+    <status>partially-true</status>
+    <verification>
+      <verification-url>https://www.td.gov.hk/en/transport_in_hong_kong/pedestrians/pedestrianisation/mong_kok/index.html</verification-url>
+      <date-checked>2025-08-01</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>high</confidence-level>
+      <notes>HK Transport Dept confirms 4pm-midnight Mon-Sat, but shows 4pm-10pm historically. Sunday/holiday hours need verification. Policy may have changed.</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-01</created-date>
+      <last-updated>2025-08-01</last-updated>
+      <importance-level>high</importance-level>
+      <tourist-relevance>critical</tourist-relevance>
+    </metadata>
+  <fact id="LM004">
+    <statement>Ladies Market located on Tung Choi Street, Mong Kok, Hong Kong</statement>
+    <source>/home/runner/work/ladies-market.hk/ladies-market.hk/index.html</source>
+    <category>geography</category>
+    <status>verified</status>
+    <verification>
+      <verification-url>https://hongkongcheapo.com/place/ladies-market/</verification-url>
+      <date-checked>2025-08-01</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>high</confidence-level>
+      <notes>Multiple authoritative sources confirm exact location: Tung Choi Street, Mong Kok district</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-01</created-date>
+      <last-updated>2025-08-01</last-updated>
+      <importance-level>critical</importance-level>
+      <tourist-relevance>critical</tourist-relevance>
+    </metadata>
+  </fact>
+
+  <fact id="LM005">
+    <statement>Ladies Market attracts over 100,000 visitors daily</statement>
+    <source>/home/runner/work/ladies-market.hk/ladies-market.hk/ladies-market-bargaining-guide-hong-kong-shopping-tips-2025.html</source>
+    <category>economy</category>
+    <status>unverified</status>
+    <verification>
+      <date-checked>2025-08-01</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>low</confidence-level>
+      <notes>Need to verify this visitor statistic with official Hong Kong Tourism Board data or other authoritative sources</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-01</created-date>
+      <last-updated>2025-08-01</last-updated>
+      <importance-level>medium</importance-level>
+      <tourist-relevance>high</tourist-relevance>
+    </metadata>
+  </fact>
+  
+</facts>
