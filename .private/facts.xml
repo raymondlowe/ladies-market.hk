@@ -4,9 +4,9 @@
 <facts>
   <metadata>
     <created>2025-08-01</created>
-    <last_updated>2025-08-01</last_updated>
-    <version>1.0</version>
-    <total_facts>3</total_facts>
+    <last_updated>2025-08-02</last_updated>
+    <version>1.1</version>
+    <total_facts>8</total_facts>
   </metadata>
   
   <fact id="LM001">
@@ -93,15 +93,75 @@
     <category>economy</category>
     <status>unverified</status>
     <verification>
-      <date-checked>2025-08-01</date-checked>
+      <date-checked>2025-08-02</date-checked>
       <checked-by>AI Fact Checker</checked-by>
       <confidence-level>low</confidence-level>
-      <notes>Need to verify this visitor statistic with official Hong Kong Tourism Board data or other authoritative sources</notes>
+      <notes>Official HK Tourism Board sources do not provide specific daily visitor counts for Ladies Market. Hong Kong total 2025 Q1: 12.2M visitors, 2024 annual: 44.5M total. Individual market statistics not publicly available.</notes>
     </verification>
     <metadata>
       <created-date>2025-08-01</created-date>
-      <last-updated>2025-08-01</last-updated>
+      <last-updated>2025-08-02</last-updated>
       <importance-level>medium</importance-level>
+      <tourist-relevance>high</tourist-relevance>
+    </metadata>
+  </fact>
+
+  <fact id="TS001">
+    <statement>Temple Street Night Market operates from 2:00 PM to midnight daily with pedestrian-only access</statement>
+    <source>.private/temple-street-research-2025-08-02.md</source>
+    <category>transportation</category>
+    <status>verified</status>
+    <verification>
+      <verification-url>https://www.discoverhongkong.com/us/explore/attractions/temple-street.html</verification-url>
+      <date-checked>2025-08-02</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>high</confidence-level>
+      <notes>Hong Kong Tourism Board and Transport Department confirm 2PM-midnight pedestrian zone. Most stalls open 4PM, peak activity after sunset.</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-02</created-date>
+      <last-updated>2025-08-02</last-updated>
+      <importance-level>high</importance-level>
+      <tourist-relevance>critical</tourist-relevance>
+    </metadata>
+  </fact>
+
+  <fact id="TS002">
+    <statement>Temple Street Night Market located between Jordan Road and Kansu Street in Yau Ma Tei, Kowloon</statement>
+    <source>.private/temple-street-research-2025-08-02.md</source>
+    <category>geography</category>
+    <status>verified</status>
+    <verification>
+      <verification-url>https://www.temple-street-night-market.hk/opening-hours</verification-url>
+      <date-checked>2025-08-02</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>high</confidence-level>
+      <notes>Multiple authoritative sources confirm exact location and street boundaries</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-02</created-date>
+      <last-updated>2025-08-02</last-updated>
+      <importance-level>critical</importance-level>
+      <tourist-relevance>critical</tourist-relevance>
+    </metadata>
+  </fact>
+
+  <fact id="JM001">
+    <statement>Jade Market operates from 10:00 AM to 4:00 PM (some shops until 6:00 PM) on Gansu Street, Yau Ma Tei</statement>
+    <source>.private/jade-market-research-2025-08-02.md</source>
+    <category>transportation</category>
+    <status>partially-true</status>
+    <verification>
+      <verification-url>https://www.visitourchina.com/hong-kong/attraction/jade-market.html</verification-url>
+      <date-checked>2025-08-02</date-checked>
+      <checked-by>AI Fact Checker</checked-by>
+      <confidence-level>medium</confidence-level>
+      <notes>Multiple sources show slight variations in closing times (4PM vs 6PM). Morning visits recommended as some shops close after noon.</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-02</created-date>
+      <last-updated>2025-08-02</last-updated>
+      <importance-level>high</importance-level>
       <tourist-relevance>high</tourist-relevance>
     </metadata>
   </fact>
