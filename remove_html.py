@@ -29,15 +29,27 @@ for filename in filenames:
         with open(filename, "r", encoding="utf-8") as f:
             text = f.read()
 
-        if ".htm" in text:
-            print("Found .htm or .html in", filename)
+        import re
+        basename = os.path.basename(filename)
+        # Special case: preserve .html in google-site-verification files
+        if basename.startswith("google") and basename.endswith(".html"):
+            lines = text.strip().splitlines()
+            if len(lines) == 1 and re.match(r"^google-site-verification: google.*\.html$", lines[0]):
+                print(f"Special case: preserving .html in {filename}")
+                # Do not modify text
+                continue
 
-            text = text.replace(".html", "")
-            text = text.replace(".htm", "")
+        # Only remove .htm/.html from href attributes ending with double quotes
+        def remove_html_from_href(match):
+            url = match.group(1)
+            url = re.sub(r"(\.html|\.htm)$", "", url)
+            return f'href="{url}"'
+
+        new_text = re.sub(r'href="([^"]*?\.(?:html|htm))"', remove_html_from_href, text)
 
         with open(filename, "w", encoding="utf-8") as f:
             print("Write file", filename)
-            f.write(text)
+            f.write(new_text)
     except:
         print("failed ", filename)
 
