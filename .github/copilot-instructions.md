@@ -1,91 +1,100 @@
-[GLOBAL STYLE GUIDE]
-Refer to centralized STYLE_GUIDE.md in .private for global standards. Repo file only houses repo-specific deviations.
+# Copilot Instructions 
 
-# Copilot Instructions
+## 0. Core Principles
+Accuracy (verify, never assume) • Completeness (finish and log) • Reusability (store research) • Currency (always note current year: run `date`).
 
-## General Principles
+## 1. Quick Workflow
+1. Read `.private/last-job.md` + CHANGELOG.md.
+2. Open / create `.private/TODO.md`; add next actions; remove lines when done (do not just strike through).
+3. Research (Tavily, Keywordseverywhere, GA4/GSC). Reuse prior material in `.private/` before new searches.
+4. Implement (template first → content → links → verification).
+5. Log outcome: update `last-job.md`, append CHANGELOG entry, archive prior `last-job.md` as `completed-job-YYYYMMDD-HHMM.md`.
 
-- **Accuracy**: Always verify facts and edits. Never assume—always check.
-- **Completeness**: Ensure all steps are finished and documented. Don’t leave tasks half-done.
+## 2. File & Naming
+`research-topic-YYYYMMDD.md`, `completed-job-YYYYMMDD-HHMM.md`. Reference issue numbers or dates in commits. Never delete raw research—append.
 
-## File Naming and Versioning
+## 3. Error / Block Logging
+Log errors or blocked tasks to `.private/errors.md` with timestamp + cause + proposed next step.
 
-- Use clear, descriptive names for new files and logs (e.g., `research-topic-YYYYMMDD.md`).
-- Reference job numbers or dates in commit messages and CHANGELOG entries.
+## 4. Research Rules
+– Use MCP servers for research when saved research documents in .private are inadaquate (Tavily, ga4-gsc-mcp, Keywordseverywhere).  
+– On timeout: `sleep 30` then retry (max 3).  
+– Store verbatim search/extract outputs under `.private/` with descriptive filenames.  
+– Before adding a recommendation (place / dish / activity) confirm existence + specifics (name, address, hours, price) via Tavily Extract; save evidence.
 
-## Error Handling
+## 5. Content Creation & Expansion
+Stub page = <100 words of actual content (exclude template boilerplate). Create via `cp template.dwt new-page.html` immediately when a viable topic is identified; seed with verified basics. Expand pages <500 words (net content) after research; measure with `wc` minus template baseline. Always add at least one unique local nuance / tip supported by research or quotes from real user reviews.
 
-- Log any errors or unexpected results in `.private/errors.md` with date/time and details.
-- If a task cannot be completed, document the reason and next steps.
+## 6. Writing Style
+Travel guide prose: clear, factual, moderately rich. Avoid bullets in prose unless for actual lists. Convert shallow bullets into explanatory paragraphs.  
+Example (bad → good):  
+Bad: `<li><strong>Clay Pot Cooking</strong>: Traditional vessels that enhance flavor development</li>`  
+Good: `<p><strong>Clay Pot Cooking</strong>: Even heat retention lets ingredients meld, producing deeper aromas and textures; this method reflects long-rooted local cooking practice.</p>`
+
+Keep paragraphs ≤ ~250 words; break walls of text with meaningful tips or callouts (avoid filler), use borders and colours and emoji to lightening things up. Avoid keyword stuffing. Tone: neutral-positive, authoritative, non-hype, helpful, on the reader's side.
+
+## 7. Localization
+English base; include local terms (e.g. MTR, RER, S‑Bahn) and optionally native script in parentheses. Use correct local currency symbol (HK$, €, £, US$ if non‑local source ambiguity). Provide simple pronunciation when helpful.
+
+## 8. Linking Policy
+External: each real-world entity gets one authoritative link; verify with Tavily Extract; broken → replace or remove. All external anchors: `target="_blank"`. If no official site, use reputable review / reference (Tripadvisor, Wikipedia, govt authority). Internal: ensure every new or expanded page is discoverable (contextual links + footer or nav if high value). Add 1–2 relevant internal links from the new page outward and from existing pages inward where logical.
+
+## 9. Templates & HTML Hygiene
+Edit inside editableRegion only. For structural changes edit the `.dwt`; replicate if needed. Use scripts (`sed`, `awk`) for bulk repetitive edits. Always close tags, especially `<script>`. Every `<img>` has concise descriptive `alt`. Maintain logical heading order. Remove dead comments / duplicate includes.
+
+## 10. SEO & Keywords
+Primary intent phrase appears once in natural H1. Use Keywordseverywhere (volume, CPC) + PASF for related expansions. Meta description: 140–155 chars, benefit-driven, no stuffing. Add unique insight rather than padding.
+
+## 11. Performance & Monetization
+Use ga4-gsc-mcp to spot: high impressions + low CTR/rank, high CPC terms lacking depth, pages just off page 1. Focus expansion there. Only AutoAds (no manual AdSense units). Do not degrade readability to force density around ads.
+
+## 12. Research Expansion Heuristic
+Found one beach? Look for 2–3 more notable ones. One local dish? Add other signature dishes. One fee? Gather comparable fees (hours / pricing tiers). Always cite sources in saved research files.
+
+## 13. YouTube / First-Hand Signals
+Check `.private/` for existing transcripts. If absent, use Tavily to locate relevant videos; extract transcript; save. Distill actionable visitor tips (best time, crowd patterns, hidden photo spot) and integrate succinctly. Try also tavily search for video transcripts.
+
+## 14. Git & Issues
+Every change ties to an issue (`#123`). Branch names: `content/<slug>` or `feature/<topic>`. Cohesive commits (e.g. "add external links", "expand history section"). No force push. No secrets / large binaries (>5MB). Reference issue in commit message.
+
+## 15. Logging & Completion
+When a job ends: archive old `last-job.md`, write new one (summary, what changed, next 3 priorities). Update CHANGELOG with concise bullet referencing issue.
+
+## 16. Definition of Done (Page)
+Structure logical; H1 unique. Paragraphs sized reasonably. Required internal + external verified links present. Alt text complete. At least one differentiated local context element. No unverified claims. Template integrity preserved. Commit references issue and logs added.
+
+## 17. Anti‑Patterns (Reject)
+Filler expansions; repetitive keyword stuffing; artificial micro-headings; orphan pages with no inbound links; generic travel boilerplate; adding layout rewrites without a specific modernization task; trivial callouts (e.g. obvious cash advice repeated).
+
+## 18. Quick Edit Test
+Keep only sentences adding who / what / why / when / how or unique context. Remove repetition, vague hype, or unverifiable speculation.
+
+## 19. MCP Server Summary
+Tavily Search/Extract → verify facts & links.  
+Keywordseverywhere → primary + related queries (volume/CPC).  
+ga4-gsc-mcp → performance triage & opportunity targeting.
 
 
-## Date/Time awarness
+## 21. Example Issue Titles
+– Expand <page> to exceed 500 words with verified specifics (#123).  
+– Add authoritative outbound links & fix broken anchors (#124).  
+– Remove manual AdSense units; enforce AutoAds only (#125).  
+– Cross-link new attraction pages in navigation (#126).  
+– Fix 404s from case-mismatched filenames (#127).
 
-Use `date` command to check the current date, pay attention to the current year.
+## 22. Example Bullet → Paragraph Conversion (Another Sample)
+Bad: `<li><strong>Beauty Services:</strong> Professional makeup application...</li>`  
+Good: `<p><strong>Beauty Services</strong>: Skilled artists tailor makeup and skincare advice to visitor needs—day touring, evening dining, or photos—adding practical routines and locally relevant product guidance.</p>`
 
-## Research and Data Collection
-- **Always use MCP servers** for research tasks
-- **Handle timeouts gracefully**: If MCP servers timeout, back off for 30-60 seconds using `sleep`
-- **Use GA4 and GSC data**: Always refer to analytics insights using the `ga4-gsc-mcp` server for live data, or the /.private/google-search-console-reports/ folder for historical data
-- **Research thoroughly**: Use Tavily to research unknown topics. Never invent or assume information—always verify with search and extract tools
-- **Prioritize keywords**: Use the KeywordsEverywhere MCP server to prioritize based on search volume and commercial value
-- **Gap Analysis**: Identify content gaps by comparing with competitors and using the Tavily MCP server for insights
-- **Fresh Content**: Look for topics that need updating or new content based on recent trends and user interests
-- **Make stub page immediately**: When a new topic has been identified make the stub page from the template (``cp <template name>.dwt <new-page-name>.html`) immediately and populate with whatever basic information you already have on the subject, e.g. from research and searches.
+## 23. Currency & Date Awareness
+Confirm year-sensitive facts (events, seasonal closures) against current year (run `date`) and adjust wording (e.g. "In 2025 the..." if time-bounded).
 
-## Project Management and Logging
-- **Log all activities**: Write detailed logs in the `.private` folder, use the CHANGELOG.md for summaries
-- **Check previous work**: When starting a job, review the `.private/last-job.md` file and the CHANGELOG.md to understand what was last completed and what needs to be done next
-- **Store working files**: Use the `.private` folder for research results to avoid duplicate effort, don't cleanup, just keep everything
-- **Use TODO.md**: Create, read and update a file `.private/TODO.md` with checklists of things to do. Delete items when done (don't just x mark them, actually delete them from the TODO.md file). When creating `Next steps` , `Next Priority Actions`, `Next Phase Priorities` or any thing about what is to do next append it to the TODO.md file.
-- **Mark completed items DONE**: Whenever following instructions in a plan document, once a step has been completed edit the file to add DONE against the completed item with a date/time. If it is in the `TODO.md` then also delete the task line from the file.
+## 24. Ads & Monetization Guardrail
+Never insert individual AdSense units. If found, remove and document in CHANGELOG + issue.
 
-## HTML and Template Management
-- **Respect editable regions**: When editing HTML pages, only make changes within "editableRegion" boundaries if they exist
-- **Edit templates, not pages**: For webpages using templates with editableRegions, make changes only in the template `.dwt` file referenced in the HTML header, then replicate the changes to the individual page files if necessary
-- **Use shell scripts for bulk edits**: Employ `.sh` scripts with `sed`, `awk`, `sed` etc. for bulk operations (e.g., updating copyright notices). Avoid using diffs for such tasks
-- **Create pages from templates**: Always use `cp <templatename>.dwt <new-filename>.html` when creating new pages
+## 25. Minimal Commit Message Format
+`<scope>: <action> (#issue) — <short outcome>`  
+Example: `content: expand night-market guide (#342) — +750w, links verified`.
 
-- **Close all tags**: Make sure that tags are closed properly, particularly `<script>` tags which must always be closed with `</script>`
-
-## Quality Control and Documentation
-- **Update instructions when needed**: If you make a mistake and correct it, update these instructions in the `.github/copilot-instructions.md` file. It is ok to include learnings that are specific to this project / destination
-- **Document completed work**: When finishing a job, save the previous last-job.md file by renaming it with the file date-time to `completed-job-date-time.md`, then update the `.private/last-job.md` file with details of what was accomplished and next steps. Add a summary to CHANGELOG.md, creating it if necessary.
-- **Verify all changes**: Always check your work—don't assume edits or shell commands executed correctly. Review files to confirm expected changes occurred
-
-## Expanding the website 
-
-- **Additional topics**: Identify topics that are missing from the website, or that could be expanded with more information, by using KeywordsEverywhere "People Also Search For" PASF to find searches that relate to the top topics mentioned in the `.private/google-search-console-reports/<domain>-query.csv`. Make stub pages from the .dwt template using `cp` and fill in with basic information from existing research first before going on to expand into indepth resource page.
-- **Expand short pages**: If pages have less than 500 words then research the topic and expand it to more than 500 words. Use `wc` to count words, but compare against the 'words' of the empty template .dwt file to make sure you are counting content words, not the template boilerplate.
-
-## Linking policy
-- **Link to authoritative sources**: Use tavily search to find correct links for hotels, restaurants, shops etc and link to them.
-- **Check existing and new links are valid**: Use tavily extract to load links and make sure they really are the correct thing, if they are not search again and fix the links. If no specific link is found a generic link such as Wikipedia or Tripadvisor can be substituted.
-- **External links to open in new window**: All external links should use `target="_blank"` to open in a new window.
-
-## Additional instructions
-
-- Do NOT add individual adsense units, rely ONLY upon the AutoAds script in the header.
-
-- Write text in full rich prose suitable for a travel guide. Use bullet points only for things that really are a list, for other items expand a concept into one or more paragraphs. Break it up to avoid walls for text with "tips", lists or "see also", but be sure to include verbose explanatory well written prose with the vocabulary and reading level of middle school. - Instead of  `<li><strong>Clay Pot Cooking</strong>: Traditional vessels that enhance flavor development</li>` use `<p><strong>Clay Pot Cooking</strong>: These traditional vessels, crafted with care and steeped in history, offer a unique method of preparing food that elevates flavors to new heights. As the clay absorbs and radiates heat evenly, it allows ingredients to meld beautifully, creating dishes that are aromatic and deeply satisfying. Discover the magic of this time-honored technique, where every meal tells a story and every bite is a celebration of local culture.` . Expand bullets into full paragraphs: instead of <li><strong>Beauty Services:</strong> Professional makeup application, skincare consultations, and color matching services</li> write <p>Travelers seeking to enhance their natural beauty or prepare for a special evening can take advantage of professional beauty services that offer a refined and personalized touch. Skilled makeup artists provide expert makeup application, adapting techniques and styles to suit each guest’s preferences—whether it’s a sophisticated look for a night out, a fresh-faced glow for sightseeing, or elegant touches for a memorable photo session. Complementing the makeup experience are skincare consultations, during which licensed estheticians assess individual skin types and concerns, offering tailored advice on routines and treatments. To ensure a flawless match between makeup and personal coloring, color matching services are also available, helping guests discover the most flattering shades for foundation, blush, and lipstick based on their unique complexion, eye color, and undertones. These services combine luxury, expertise, and attention to detail, allowing visitors to feel rejuvenated and confident throughout their journey.</p>
-
-- Make sure newly created pages are integrated into site via relevant hyperlinks from other pages, or adding into footer or navigation for high value pages.
-
-- If you are recommending a specific place, dish, activity then use Tavily search to research and make sure it really is available at that location, and having found it get some specifics such as company names, restaurant names, addresses, prices, opening hours etc where that place, dish, activity etc is available. Store verbatim Tavily search results into the .private folder with meaningful name for future reference.
-
-- When you find one object at a location do research to find similar or additional. e.g. if you find a beach is mentioned search for more beaches if you have a recommended restaurant, search for more resturants, if you find a famous dish search for more famous dishes, if you find an entrance fee, search for more fees.
-
-- When starting each project make good use of research tools including Tavily search, Google Analytics 4 and Google Search Console (ga4-gsc-mcp). New research should be stored verbatim in the .private folder for future reference.
-
-- Examine and make use of all files in the `.private` folder that might help with a task. Pay attention to the facts file. and the fact checking instructions.
-
-- Constantly strive to make the website even more be impressively informative, meticulously accurate, and clearly superior to its previous version - serving as a reliable resource for travelers.
-
-- Look in the .private folder for youtube transcripts that can contain real user experience information that is useful for local color and detail. If no transcripts found try Tavily search to find youtube videos that are relevant to the topic you are working on, and then use the Tavily Extract tool to extract the material about the video. Store the transcript in the `.private` folder with a meaningful name for future reference.  Use this real user experience to enhance the site by offering "tips" and "recommendations" based on real user experience as well as looking for related topics that real visitors to the location have noticed, perhaps an interesting photo point, a great local cafe, a hidden gem that is not in the guidebooks.
-
-## Localization and Language
-
-- Always write in English but use local terms where appropriate, e.g. "MTR" for the subway in Hong Kong, "RER" for the Paris suburban train system, "S-Bahn" for the Berlin suburban train system, etc.  Local language names can be appended in parentheses, e.g. "MTR (地鐵)".
-- Use local currency symbols and formats, e.g. "HK$" for Hong Kong dollars, "€" for Euros, "£" for British pounds.
-- Prices should be in the local currency of the location being discussed, e.g. "HK$100" for a restaurant in Hong Kong, "€50" for a museum in Paris, "£20" for a park in London. In US locations use "$" for US dollars. Check the prices are reasonable, as online resources may give prices in US$ and jsut say $, so a resource that just says $ you have to work out is it local currency or US dollars. Use online search or currency converters to verify the local currency and convert prices if necessary.
-- Give pronunciation tips for local names, e.g. "MTR (pronounced 'em-tee-are')", "RER (pronounced 'air-air')", "S-Bahn (pronounced 'ess-bahn')", "Ximending (pronounced 'shee-men-ding')"
+## 26. Be thorougher, use checklists.
+- Make your own internal check list of tasks to do, such as pages to process, and make sure you complete them.
