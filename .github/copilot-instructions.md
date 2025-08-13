@@ -1,3 +1,6 @@
+[GLOBAL STYLE GUIDE]
+Refer to centralized STYLE_GUIDE.md in .private for global standards. Repo file only houses repo-specific deviations.
+
 # Copilot Instructions
 
 ## General Principles
