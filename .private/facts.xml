@@ -4,9 +4,9 @@
 <facts>
   <metadata>
     <created>2025-08-01</created>
-    <last_updated>2025-08-02</last_updated>
-    <version>1.1</version>
-    <total_facts>8</total_facts>
+    <last_updated>2025-08-14</last_updated>
+    <version>1.2</version>
+    <total_facts>10</total_facts>
   </metadata>
   
   <fact id="LM001">
@@ -162,6 +162,46 @@
       <created-date>2025-08-02</created-date>
       <last-updated>2025-08-02</last-updated>
       <importance-level>high</importance-level>
+      <tourist-relevance>high</tourist-relevance>
+    </metadata>
+  </fact>
+  
+  <fact id="SF001">
+    <statement>Hong Kong street food generates 1,600 monthly searches with zero competition, representing major content opportunity</statement>
+    <source>/home/runner/work/ladies-market.hk/ladies-market.hk/where-to-eat.html</source>
+    <category>content-marketing</category>
+    <status>verified</status>
+    <verification>
+      <verification-url>KeywordsEverywhere MCP analysis 2025-08-14</verification-url>
+      <date-checked>2025-08-14</date-checked>
+      <checked-by>AI Content Optimizer</checked-by>
+      <confidence-level>high</confidence-level>
+      <notes>Search volume: 1600/month, CPC: $0.00, Competition: 0.02. Represents untapped traffic opportunity for food content.</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-14</created-date>
+      <last-updated>2025-08-14</last-updated>
+      <importance-level>high</importance-level>
+      <tourist-relevance>high</tourist-relevance>
+    </metadata>
+  </fact>
+
+  <fact id="SF002">
+    <statement>Hong Kong souvenirs keyword generates 590 monthly searches with $0.16 CPC, indicating commercial value</statement>
+    <source>/home/runner/work/ladies-market.hk/ladies-market.hk/what-to-buy-at-ladies-market-hong-kong-shopping-guide-2025.html</source>
+    <category>content-marketing</category>
+    <status>verified</status>
+    <verification>
+      <verification-url>KeywordsEverywhere MCP analysis 2025-08-14</verification-url>
+      <date-checked>2025-08-14</date-checked>
+      <checked-by>AI Content Optimizer</checked-by>
+      <confidence-level>high</confidence-level>
+      <notes>Search volume: 590/month, CPC: $0.16, Competition: 0.11. Strong commercial intent for souvenirs content targeting.</notes>
+    </verification>
+    <metadata>
+      <created-date>2025-08-14</created-date>
+      <last-updated>2025-08-14</last-updated>
+      <importance-level>medium</importance-level>
       <tourist-relevance>high</tourist-relevance>
     </metadata>
   </fact>
